@@ -27,6 +27,23 @@ Select your favorite season to change the website theme:
 </select>
 
 </form>
+<div id="spring">
+    <h1>Spring</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkMHut2tuzEzfv-MRT3O-Q0AX_VDfwCbi08Q&usqp=CAU" height="150" width="300" id="springImage">
+</div>
+<div id="summer">
+    <h1>Summer</h1>
+    <img src="https://thebrownidentity.com/wp-content/uploads/2020/07/01-birth-month-If-You-Were-Born-In-Summer-This-Is-What-We-Know-About-You_644740429-icemanphotos.jpg" height="150" width="300" id="summerImage">
+</div>
+<div id="autumn">
+    <h1>Autumn</h1>
+    <img src="https://cdn.britannica.com/88/137188-050-8C779D64/Boston-Public-Garden.jpg" height="150" width="300" id="autumnImage">
+</div>
+<div id="winter">
+    <h1>Winter</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Winter_forest_silver.jpg" height="150" width="300" id="winterImage">
+</div>
+
 
 
 
@@ -43,6 +60,36 @@ function updateBackgroundColor(selectElem) {
     return;
   }
   document.body.style.backgroundColor = selectElem.options[i].value;
+  if (selectElem.value == "#ffffff")
+  {
+    document.getElementById('spring').style.display = 'block';
+    document.getElementById('summer').style.display = 'none';
+    document.getElementById('autumn').style.display = 'none';
+    document.getElementById('winter').style.display = 'none';
+  }
+  else if (selectElem.value == "#cc0000")
+  {
+    document.getElementById('spring').style.display = 'none';
+    document.getElementById('summer').style.display = 'block';
+    document.getElementById('autumn').style.display = 'none';
+    document.getElementById('winter').style.display = 'none';
+  }
+  else if (selectElem.value == "#00cc00")
+  {
+    document.getElementById('spring').style.display = 'none';
+    document.getElementById('summer').style.display = 'none';
+    document.getElementById('autumn').style.display = 'block';
+    document.getElementById('winter').style.display = 'none';
+    
+  }
+  else if (selectElem.value == "#0000cc")
+  {
+    document.getElementById('spring').style.display = 'none';
+    document.getElementById('summer').style.display = 'none';
+    document.getElementById('autumn').style.display = 'none';
+    document.getElementById('winter').style.display = 'block';
+    
+  }
 }
 
 
